@@ -32,3 +32,9 @@ class Airplane:
 
     def listPassengers(self):
         print(self.passengerNames)
+
+    def findPassenger(self, name):
+        if name in self.passengerNames:
+            print(f'Found {name}!')
+        else:
+            print("No name found!")
