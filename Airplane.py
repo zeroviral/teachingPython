@@ -41,8 +41,3 @@ class Airplane:
 
     def listPassengers(self):
         print(self.passengers)
-
-    def getPassengerSeatNumber(self, name):
-        returnString = ("Passenger '%s' has seat number: %i" % (name, self.passengers[name]))
-
-        return returnString
