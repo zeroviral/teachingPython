@@ -2,6 +2,7 @@ class Airplane:
 
     maxSpeed = None
     passengerCount = None
+    passengerNames = []
 
     def __init__(self, passengers=100):
         self.passengerCount = passengers
@@ -26,3 +27,8 @@ class Airplane:
         travelTime = totalDistance // self.maxSpeed
         return travelTime
 
+    def addPassenger(self, name):
+        self.passengerNames.append(name)
+
+    def listPassengers(self):
+        print(self.passengerNames)
