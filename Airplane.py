@@ -1,11 +1,15 @@
+from collections import defaultdict
+
 class Airplane:
 
     maxSpeed = None
     passengerCount = None
-    passengerNames = []
+    passengers = defaultdict()
+    seatsAvailable = None
 
-    def __init__(self, passengers=100):
+    def __init__(self, passengers=100, seatsAvailable=100):
         self.passengerCount = passengers
+        self.seatsAvailable = seatsAvailable
 
     def getCapacity(self):
         return self.passengerCount
@@ -28,13 +32,12 @@ class Airplane:
         return travelTime
 
     def addPassenger(self, name):
-        self.passengerNames.append(name)
+        if self.seatsAvailable == 0:
+            print("No more seats available")
+            return
+
+        self.passengers[name] = self.seatsAvailable
+        self.seatsAvailable -= 1
 
     def listPassengers(self):
-        print(self.passengerNames)
-
-    def findPassenger(self, name):
-        if name in self.passengerNames:
-            print(f'Found {name}!')
-        else:
-            print("No name found!")
+        print(self.passengers)
