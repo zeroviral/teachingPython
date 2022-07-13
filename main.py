@@ -9,4 +9,6 @@ passenger = "John Smith"
 
 proto1.addPassenger(passenger)
 proto1.listPassengers()
+b52.cancelReservation("John Smith")
+proto1.listPassengers()
 
