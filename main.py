@@ -9,4 +9,5 @@ passenger = "John Smith"
 
 proto1.addPassenger(passenger)
 proto1.listPassengers()
-
+b52.remove_passenger("John Smith")
+b52.listPassengers()
