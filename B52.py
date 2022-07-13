@@ -10,4 +10,15 @@ class B52(Airplane):
             self.passengers[name] = None
 
 
+    def remove_passenger(self, passenger):
+        for seat, name in self.passengers.items():
+            if name == passenger:
+                del self.passengers[seat]
+                return
+
+
+
+
+
+
 
